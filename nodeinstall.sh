@@ -30,7 +30,7 @@ spin() {
 
 # Отрисовка заголовка
 clear
-echo -e "${BLUE}======================================================${RESET}"
+echo -e "${BLUE}=============================================================================${RESET}"
 echo -e "${BLUE}       _______       _____            __   __ ${RESET}"
 echo -e "${BLUE}    /\|__   __|/\   |  __ \     /\    \ \ / / ${RESET}"
 echo -e "${BLUE}   /  \  | |  /  \  | |__) |   /  \    \ V /  ${RESET}"
@@ -40,7 +40,7 @@ echo -e "${BLUE}/_/    \_\_/_/    \_\_|  \_\/_/    \_\/_/ \_\ ${RESET}"
 echo -e "${BLUE}======================================================${RESET}"
 echo -e "${PURPLE}   Easy install Node Exporter Full Dashboard${RESET}"
 echo -e "${YELLOW}Prometheus 3.0.1 + Node Exporter 1.8.2 + Grafana${RESET}"
-echo -e "${BLUE}======================================================${RESET}"
+echo -e "${BLUE}=============================================================================${RESET}"
 
 echo -e "${YELLOW}Начать установку? (y/n)${RESET}"
 read -r answer
