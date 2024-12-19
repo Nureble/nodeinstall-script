@@ -25,20 +25,29 @@ spin() {
     echo -e "\r${YELLOW}$2 [${GREEN}OK${YELLOW}]${RESET}"
 }
 
+
+
+
 # Отрисовка заголовка
 clear
+echo -e "${BLUE}======================================================${RESET}"
+echo -e "${BLUE}       _______       _____            __   __ ${RESET}"
+echo -e "${BLUE}    /\|__   __|/\   |  __ \     /\    \ \ / / ${RESET}"
+echo -e "${BLUE}   /  \  | |  /  \  | |__) |   /  \    \ V /  ${RESET}"
+echo -e "${BLUE}  / /\ \ | | / /\ \ |  _  /   / /\ \    > <   ${RESET}"
+echo -e "${BLUE} / ____ \| |/ ____ \| | \ \  / ____ \  / . \  ${RESET}"
+echo -e "${BLUE}/_/    \_\_/_/    \_\_|  \_\/_/    \_\/_/ \_\ ${RESET}"
+echo -e "${BLUE}======================================================${RESET}"
+echo -e "${PURPLE}   Easy install Node Exporter Full Dashboard${RESET}"
+echo -e "${YELLOW}Prometheus 3.0.1 + Node Exporter 1.8.2 + Grafana${RESET}"
+echo -e "${BLUE}======================================================${RESET}"
 
-echo -e "${BLUE}======================================================${RESET}"
-echo -e "${BLUE}    █████╗ ████████╗ █████╗ ██████╗  █████╗   ██╗   ██╗ ${RESET}"
-echo -e "${BLUE}   ██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗   ██╗ ██╔╝ ${RESET}"
-echo -e "${BLUE}   ███████║   ██║   ███████║██████╔╝███████║    ████╔╝  ${RESET}"
-echo -e "${BLUE}   ██╔══██║   ██║   ██╔══██║██╔═══╝ ██╔══██║    ╚██╔╝   ${RESET}"
-echo -e "${BLUE}   ██║  ██║   ██║   ██║  ██║██║     ██║  ██║   ██╔╝██╗ ${RESET}"
-echo -e "${BLUE}   ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝  ██╔╝   ██╗ ${RESET}"
-echo -e "${BLUE}======================================================${RESET}"
-echo -e "${PURPLE}                    ATARAX${RESET}"
-echo -e "${YELLOW}Prometheus + Node Exporter + Grafana${RESET}"
-echo -e "${BLUE}======================================================${RESET}"
+echo -e "${YELLOW}Начать установку? (y/n)${RESET}"
+read -r answer
+if [[ "$answer" != "y" ]]; then
+    echo -e "${RED}Установка отменена.${RESET}"
+    exit 0
+fi
 
 # Установка Prometheus
 {
@@ -53,6 +62,7 @@ echo -e "${BLUE}======================================================${RESET}"
     sudo cp prometheus.yml /etc/prometheus/
     sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
     sudo chown prometheus:prometheus /usr/local/bin/prometheus /usr/local/bin/promtool
+	sudo sed -i '/^scrape_configs:/a \ \ - job_name: "node"\n\ \ \ \ static_configs:\n\ \ \ \ \ \ - targets: ["localhost:9100"]' /etc/prometheus/prometheus.yml
     sudo tee /etc/systemd/system/prometheus.service > /dev/null <<EOF
 [Unit]
 Description=Prometheus Monitoring
