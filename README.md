@@ -1,1 +1,1 @@
-# NodeExporterInstaller
+# nodeinstall script
