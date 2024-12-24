@@ -6,8 +6,13 @@
 ![Скриншот](https://i.imgur.com/JO6NyQG.png)
 
 Описание:
+Выберите действие:
+1) Установить связку Prometheus + Node Exporter + Grafana
+2) Удалить связку Prometheus + Node Exporter + Grafana
+
+1 команда:
 Скрипт автоматически устанавливает:
-1. Prometheus версии 3.0.1 и редактирует файл prometheus.yml, добавляя настройки для мониторинга метрик, предоставляемых Node Exporter.
+1. Prometheus и редактирует файл prometheus.yml, добавляя настройки для мониторинга метрик, предоставляемых Node Exporter.
 
 В файл prometheus.yml добавляются следующие инструкции:
 ```
@@ -17,7 +22,7 @@
 ```
 
 
-2. Node Exporter 1.8.2
+2. Node Exporter
 3. Grafana
 
 После выполнения, скрипт предоставит вам ссылки, по которым можно зайти в Prometheus и Grafana:
@@ -26,6 +31,7 @@
 
 Далее останется только добавить Datasource Prometheus в Grafana и импортировать дашборд.
 
+2 команда:
 Скрипт может удалить всю связку по команде.
 
 
