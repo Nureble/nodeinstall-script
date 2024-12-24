@@ -1,6 +1,9 @@
 # nodeinstall script
 
-Скрипт автоматически устанавливает связку Prometheus 3.0.1 + Node Exporter 1.8.2 + Grafana для работы и настраивает с дашбордом [Node Exporter Full](https://grafana.com/grafana/dashboards/1860-node-exporter-full)
+Скрипт автоматически устанавливает связку актуальных версий Prometheus + Node Exporter + Grafana для работы и настраивает с дашбордом [Node Exporter Full](https://grafana.com/grafana/dashboards/1860-node-exporter-full)
+
+
+![Скриншот](https://i.imgur.com/JO6NyQG.png)
 
 Описание:
 Скрипт автоматически устанавливает:
@@ -19,9 +22,13 @@
 
 После выполнения, скрипт предоставит вам ссылки, по которым можно зайти в Prometheus и Grafana:
 
-![Альтернативный текст](https://i.imgur.com/jGUN5WM.gif)
+![Гиф анимация процесса установки](https://i.imgur.com/jGUN5WM.gif)
 
 Далее останется только добавить Datasource Prometheus в Grafana и импортировать дашборд.
+
+Скрипт может удалить всю связку по команде.
+
+
 
 Для запуска выполните команду:
 ```bash
