@@ -1,6 +1,6 @@
 # nodeinstall script
 
-Скрипт автоматически устанавливает связку актуальных версий Prometheus + Node Exporter + Grafana для работы и настраивает с дашбордом [Node Exporter Full](https://grafana.com/grafana/dashboards/1860-node-exporter-full)
+Скрипт автоматически устанавливает связку актуальных версий Prometheus + Node Exporter + Grafana и настраивает для работы с дашбордом [Node Exporter Full](https://grafana.com/grafana/dashboards/1860-node-exporter-full)
 
 
 ![Скриншот](https://i.imgur.com/JO6NyQG.png)
