@@ -6,7 +6,7 @@ Bash-скрипт для установки связки **Prometheus + Node Exp
 
 Целевой дашборд: [Node Exporter Full (ID 1860)](https://grafana.com/grafana/dashboards/1860-node-exporter-full).
 
-![Скриншот](https://i.imgur.com/JO6NyQG.png)
+![Скриншот](https://i.imgur.com/vR8Po8T.png)
 
 ---
 
